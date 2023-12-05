@@ -4,13 +4,14 @@ package com.folksdevbank.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
 @Table(name = "Account")
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@EqualsAndHashCode //test sınıfındaki account ile service sınıfındakinin aynı nesne olmamasından kaynaklanan hatayı yok eder.
 public class Account {
 
     @Id

@@ -26,7 +26,7 @@ public class CustomerService {
         Customer customer=new Customer();
         customer.setId(createCustomerRequest.getId());
         customer.setName(createCustomerRequest.getName());
-        customer.setAddress(createCustomerRequest.getAddress());
+        customer.setAddress(s);
         customer.setDateOfBirth(createCustomerRequest.getDateOfBirth());
         customer.setCity(City.valueOf(createCustomerRequest.getCity().name()));
 

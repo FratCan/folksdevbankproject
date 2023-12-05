@@ -3,10 +3,7 @@ package com.folksdevbank.dto;
 
 import com.folksdevbank.model.City;
 import com.folksdevbank.model.Currency;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter

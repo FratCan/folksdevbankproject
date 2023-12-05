@@ -24,8 +24,10 @@ public class AccountService {
 
         Customer customer=customerService.getCustomerById(createAccountRequest.getCustomerId());
 
-        if (customer.getId()==null || customer.getId()==""){
-            return new AccountDto();
+        if (customer.getId()==null || customer.getId().trim().equals("")){
+            throw new RuntimeException("Customer Not Found!!");
+            //return AccountDto.builder().build();
+            //return new AccountDto yukardakiyle aynı anlamda
         }
 
         Account account=Account.builder()
@@ -48,7 +50,8 @@ public class AccountService {
         Customer customer=customerService.getCustomerById(updateAccountRequest.getCustomerId());
 
 
-        if (customer.getId()==null || customer.getId()==""){
+        if (customer.getId()==null || customer.getId().trim().equals("")){
+            //throw new RuntimeException("Customer Not Updated!!");
             return new AccountDto();
         }
 
